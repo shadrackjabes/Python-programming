@@ -147,7 +147,7 @@ def get_pollurl_list(url):
     return(l)
     
 url = "http://www.realclearpolitics.com/epolls/2010/governor/2010_elections_governor_map.html"
-tab=get_pollurl_list(url)
-print(tab)
+table=get_pollurl_list(url)
+print(table)
     
 
