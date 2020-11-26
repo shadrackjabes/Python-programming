@@ -24,16 +24,17 @@ def get_movie(soup):
             tag_a=tag_h3[j].find_all('a',href=True)
             for k in range(len(tag_a)):
                 title.append(tag_a[k].get_text(" ",strip=True))
-        for j in range(len(tag_div)):
-            rating.append(tag_div[j].find("strong").get_text(" ",strip=True))
-    return(rating,title)
+        #for j in range(len(tag_div)):
+            #rating.append(tag_div[j].find("strong").get_text(" ",strip=True))
+    return(title)
 
  
 url='http://www.imdb.com/search/title?sort=num_votes,desc&start=1&title_type=feature&year=1950,2012'
 html=fetching_html(url)
 soup=parsing_html(html)
-rating,title=get_movie(soup)
-print(title,rating)
+title=get_movie(soup)
+print(title)
+
 
 
 
